@@ -9,7 +9,7 @@ export default class NewsItem extends Component {
         return (
             <div className=' container'>
                 <div className="card" style={{width: "18rem"}} >
-                    <img src={imageUrl} className="card-img-top" alt="..."/>
+                    <img src={!imageUrl?"https://img.etimg.com/thumb/msid-96836000,width-1070,height-580,imgsize-120772/photo.jpg":imageUrl} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">{description}</p>
