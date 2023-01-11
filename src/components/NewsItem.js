@@ -4,7 +4,7 @@ export default class NewsItem extends Component {
 
     render() {
         //Array destructuring
-        let {title,description,imageUrl,newsUrl}=this.props
+        let {title,description,imageUrl,newsUrl,author,date}=this.props
 
         return (
             <div className=' container'>
@@ -13,6 +13,7 @@ export default class NewsItem extends Component {
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">{description}</p>
+                            <p className="card-text"><small className="text-muted">By {author?author:"Unkown"} on {date}</small></p>
                             <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-dark">ReadMore</a>
                         </div>
                 </div>
